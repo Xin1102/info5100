@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" charset="utf-8" defer></script>
+    <title>Xin's gussing number game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@1,700&display=swap" rel="stylesheet"></head>
+
+<body>
+    <header>
+        <h1>GUSSING GAME</h1>
+        <h1>[001 - 100]</h1>
+    </header>
+
+    <table id="table1">
+        <tr id="answerLine">
+            <td id="firstBlank"></td>
+            <td id="secondBlank"></td>
+            <td id="thirdBlank"></td>
+            <td id="forthBlank"></td>
+            <td id="fifthBlank"></td>
+        </tr>
+    </table>
+    <div id="gussingPart">
+        <p id="leftHint"></p>
+        <div>
+            <input type="number" id="inputNumber" max="100" min="1" placeholder="001-100">
+            <button id="guessButton">Guess</button>
+            <button id="resetButton">Reset</button>
+            <button id="hintButton">Hint</button>
+        </div>
+        <p id="rightHint"></p>
+    </div>
+</body>
+
+</html>
