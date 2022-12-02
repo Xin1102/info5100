@@ -1,0 +1,1 @@
+export {default as AnimalCrossing} from "./AnimalCrossing.js"
