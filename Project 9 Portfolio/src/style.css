@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    /* font-family: 'DM Sans', sans-serif; */
+    font-family: 'Paytone One', sans-serif;
+
+}
+
+body {
+    /* background-color: rgb(221, 221, 131); */
+    background-image: url("./images/background.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.edu {
+    border: solid 5px rgb(64, 0, 0, 0.58);
+    color:rgb(64, 0, 0);
+    font-size: 16px;
+    background-color: rgb(243, 207, 207, 0.5);
+    margin-top: -10px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.photo {
+    height: 227px;
+    width: 227px;
+}
+
+.projectsDiv {
+    display: flex;
+    flex-wrap: wrap;
+    width: 46%;
+    float: right;
+    margin-right: -64px;
+    margin-top: -20px;
+}
+
+
+.project {
+    border: solid 5px rgb(64, 0, 0, 0.58);
+    background-color: rgb(243, 207, 207, 0.5);
+    margin: 10px;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    height: 8%;
+    width: 40%;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+.greetingsDiv {
+    position: absolute;
+    right: 10%;
+}
+
+.hi {
+    font-size: 50px;
+    /* background-color: aquamarine; */
+    margin-top: 5%;
+}
+
+.Xin {
+    margin-top: -3%;
+    font-size: 200px;
+    color: rgb(64, 0, 0);
+    /* background-color: brown; */
+}
+
+.Xin2 {
+    position: absolute;
+    bottom: -3%;
+    left: 2%;
+    font-size: 270px;
+    color: rgb(64, 0, 0, 0.2);
+    /* background-color: cornsilk; */
+}
+
+.point {
+    position: absolute;
+    font-size: 208px;
+    color: rgb(33, 0, 95);
+    bottom: 20%;
+    right: 44.2%;
+    /* background-color: antiquewhite; */
+}
+
+.components {
+    /* background-color: pink; */
+    position: absolute;
+    top: 42%;
+    right: 10%;
+}
+
+.links {
+    position: fixed;
+    bottom: -20px;
+    right: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.linkButton {
+    height: 50%;
+    /* background-color: aqua; */
+    border: 5px rgb(64, 0, 0) solid;
+    color:rgb(64, 0, 0);
+    font-size: large;
+    padding: 5px;
+    padding-bottom: 20px;
+    margin-right: 10px;
+}
+
+.linkButton:hover {
+    background-color: rgb(64, 0, 0);
+    color: white;
+}
+
+.title {
+    /* background-color: aqua; */
+    margin-top: 30px;
+    text-align: right;
+    color:rgb(33, 0, 95);
+}
+
+.title1 {
+    margin-top: 30px;
+    margin-right: -120px;
+    text-align: right;
+    color:rgb(33, 0, 95);
+}
