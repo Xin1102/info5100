@@ -5,6 +5,7 @@ const inputNumber = document.querySelector("#inputNumber");
 const guessButton = document.querySelector("#guessButton");
 const resetButton = document.querySelector("#resetButton");
 const hintButton = document.querySelector("#hintButton");
+const wrongAnswer = document.querySelector(".wrongAnswer");
 
 guessButton.addEventListener("click", inputGuessNumber);
 resetButton.addEventListener("click", resetGame);
@@ -17,33 +18,40 @@ function randomNumber(range) {
 }
 
 let guessingNumber = randomNumber(100);
-console.log(guessingNumber);
 
 function inputGuessNumber() {
-    roundNumber--;
     let inputNum = inputNumber.value;
-    let result = inputNum + hintSign(inputNum);
-    if (roundNumber === 4) {
-        document.querySelector("#firstBlank").innerHTML = result;
-    } else if (roundNumber === 3) {
-        document.querySelector("#secondBlank").innerHTML = result;
-    } else if (roundNumber === 2) {
-        document.querySelector("#thirdBlank").innerHTML = result;
-    } else if (roundNumber === 1) {
-        document.querySelector("#forthBlank").innerHTML = result;
-    } else if (roundNumber === 0) {
-        document.querySelector("#guessButton").disabled = true;
-        document.querySelector("#guessButton").style.backgroundColor ="grey";
-        document.querySelector("#fifthBlank").innerHTML = result;
-        if (inputNum != guessingNumber) {
-            document.querySelector("#fifthBlank").innerHTML = "❌";
+    if (inputNum <= 0 || inputNum > 100) {
+        wrongAnswer.innerHTML = "you need to input number from 1 to 100"
+    } else {
+        wrongAnswer.innerHTML = ""
+        roundNumber--;   
+        let result = inputNum + hintSign(inputNum);
+        if (roundNumber === 4) {
+            document.querySelector("#firstBlank").innerHTML = result;
+        } else if (roundNumber === 3) {
+            document.querySelector("#secondBlank").innerHTML = result;
+        } else if (roundNumber === 2) {
+            document.querySelector("#thirdBlank").innerHTML = result;
+        } else if (roundNumber === 1) {
+            document.querySelector("#forthBlank").innerHTML = result;
+        } else if (roundNumber === 0) {
+            document.querySelector("#guessButton").disabled = true;
+            document.querySelector("#guessButton").style.backgroundColor ="grey";
+            document.querySelector("#fifthBlank").innerHTML = result;
+            if (inputNum != guessingNumber) {
+                document.querySelector("#fifthBlank").innerHTML = "❌";
+            }
         }
     }
+
 }
 
 function hintSign(inputNum) {
     if (inputNum == guessingNumber) {
-        return " Corret! 🏆"
+        document.querySelector("#guessButton").disabled = true;
+        document.querySelector("#guessButton").style.backgroundColor ="grey";
+        return " Correct! 🏆"
     } else if (inputNum < guessingNumber) {
         return "⬆";
     } else {
@@ -65,8 +73,6 @@ function hintNumber() {
     if (hintArray.indexOf(guessingNumber) === -1) {
         hintArray[randomNumber(10)] = guessingNumber;
     }
-    console.log(hintArray);
-    console.log(guessingNumber);
     leftHint.textContent = hintArray.slice(0,5);
     rightHint.textContent = hintArray.slice(5,10);
     document.querySelector("#hintButton").disabled = true;

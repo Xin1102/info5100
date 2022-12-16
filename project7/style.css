@@ -5,14 +5,24 @@
 }
 
 body {
-    background-color:rgb(134, 179, 134);
+    background-color:rgb(128, 188, 128);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.background {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+
 h1 {
-    color:rgb(169, 16, 16);
+    color:yellow;
     align-items: center;
     text-align: center;
 }
@@ -28,6 +38,7 @@ table {
 td {
     border: 2px solid black;
     font-size: large;
+    width:20%;
 }
 
 input {
